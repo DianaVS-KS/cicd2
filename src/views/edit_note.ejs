@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://bootswatch.com/4/minty/bootstrap.min.css" rel="stylesheet">
+    <title>Express App</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/<%= data.idnotes %>" method="POST">
+                        <div class="form-group m-2">
+                            <input type="text" name="title" value="<%= data.title %>" class="form-control">
+                        </div>
+                        <div class="form-group m-2">
+                            <input type="text" name="message" value="<%= data.message %>" class="form-control">
+                        </div>            
+                        <button class="btn btn-primary" type="submit">Edit Note</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
