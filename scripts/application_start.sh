@@ -1,8 +1,8 @@
 #!/bin/bash
-sudo chmod -R 777 /home/ubuntu/express-app
+sudo chmod -R 777 /home/ubuntu/express-app1
 
 #navigate into our workin directory
-cd /home/ubuntu/express-app
+cd /home/ubuntu/express-app1
 
 #add npm and node path
 export NVM_DIR="$HOME/.nvm"
