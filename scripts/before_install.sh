@@ -7,7 +7,7 @@ nvm install node
 
 #create our working directory if it doesnt exist
 
-DIR="home/ubuntu/cicd-homework2"
+DIR="home/ubuntu/express-app"
 if [ -d "$DIR" ]; then
   echo "${DIR} exists"
 else
