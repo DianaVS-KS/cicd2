@@ -1,15 +1,16 @@
 #!/bin/bash
 
 #download node and npm
-curl -o- https://raw.githubuser.content.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 . ~/.nvm/nvm.sh
 nvm install node
 
-#create our working directory
+#create our working directory if it doesnt exist
+
 DIR="home/ubuntu/cicd-homework2"
-if [-d "$DIR"]; then
-    echo "${DIR} exists"
+if [ -d "$DIR" ]; then
+  echo "${DIR} exists"
 else
-    echo "Creating ${DIR} directory"
-    mkdir ${DIR}
+  echo "Creating ${DIR} directory"
+  mkdir ${DIR}
 fi
