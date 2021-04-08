@@ -1,8 +1,8 @@
 #!/bin/bash
-sudo chmod -R 777 /home/ec2-user/express-app
+sudo chmod -R 777 /home/ubuntu/cicd-homework2
 
 #navigate into our workin directory
-cd /home/ec2-user/express-app
+cd /home/ubuntu/cicd-homework2
 
 #add npm and node path
 export NVM_DIR="$HOME/.nvm"
@@ -10,4 +10,4 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 npm install
 
-node src/index.js > app.out.log 2> app.err.log < /dev/null &
+node index.js > index.out.log 2> index.err.log < /dev/null &

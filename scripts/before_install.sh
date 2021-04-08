@@ -6,7 +6,7 @@ curl -o- https://raw.githubuser.content.com/nvm-sh/nvm/v0.34.0/install.sh | bash
 nvm install node
 
 #create our working directory
-DIR="home/ec2-user/express-app"
+DIR="home/ubuntu/cicd-homework2"
 if [-d "$DIR"]; then
     echo "${DIR} exists"
 else
