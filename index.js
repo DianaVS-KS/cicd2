@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan('dev'));
 
-const notesRoutes = require('./src/routes/notes');
+const notesRoutes = require('./notesRoutes');
 app.use('/', notesRoutes);
 
 app.listen(app.get('port'), () => {

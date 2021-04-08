@@ -1,5 +1,5 @@
 const controller = {};
-const connection = require('../config/db.config');
+const connection = require('./db.config');
 
 
 controller.list = (req,res) => {
