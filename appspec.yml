@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
- - source: /
-   destination: /home/ubuntu/cicd2
+  - source: /
+    destination: /home/ubuntu/cicd2
 hooks:
   ApplicationStop:
     - location: scripts/application_stop.sh
