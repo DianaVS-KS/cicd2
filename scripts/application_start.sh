@@ -3,16 +3,20 @@
 #give permission for everything in the express-app directory
 sudo chmod -R 777 /home/ubuntu/cicd2
 
-#navigate into our working directory where we have all our github files
+# move to git folder
 cd /home/ubuntu/cicd2
 
-#add npm and node to path
-export NVM_DIR="$HOME/.nvm"	
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # loads nvm	
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # loads nvm bash_completion (node is in path now)
-
 #install node modules
-npm install
+sudo npm install
 
-#start our node app in the background
-node index.js > index.out.log 2> index.err.log < /dev/null & 
+# stop and delete all previous pm2 process
+pm2 stop all
+sleep 1
+pm2 delete all
+sleep 1
+
+# start our node app in the background
+pm2 start app.js 
+
+# start nginx server
+sudo service nginx start
