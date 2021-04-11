@@ -16,7 +16,7 @@ pm2 delete all
 sleep 1
 
 # start our node app in the background
-pm2 start app.js 
+pm2 start index.js 
 
 # start nginx server
 sudo service nginx start
